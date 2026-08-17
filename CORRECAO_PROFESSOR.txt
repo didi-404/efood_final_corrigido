@@ -1,0 +1,24 @@
+CORREÇÃO APLICADA - MODAL DO CARRINHO / CHECKOUT
+
+Feedback recebido:
+A entrega deveria seguir o fluxo do Figma, mantendo o carrinho e os formulários
+no mesmo Modal lateral, substituindo a tela do conteúdo a cada etapa.
+
+Nesta versão:
+
+1. O usuário abre um prato pelo modal de produto.
+2. Ao clicar em "Adicionar ao carrinho", o produto é adicionado e o painel
+   lateral do carrinho abre automaticamente.
+3. O carrinho exibe produtos, valor total e ícone de lixeira.
+4. "Continuar com a entrega" NÃO muda a URL: o conteúdo do mesmo painel lateral
+   é substituído pelo formulário de entrega.
+5. "Continuar com o pagamento" mantém o mesmo painel e carrega o formulário de
+   pagamento.
+6. "Finalizar pagamento" envia o POST para a API da EBAC.
+7. A resposta com o número do pedido é exibida no mesmo painel lateral.
+8. O carrinho é limpo após a compra ser confirmada.
+
+Fluxo final:
+CARRINHO -> ENTREGA -> PAGAMENTO -> PEDIDO REALIZADO
+
+Não existem mais rotas ativas para /carrinho, /checkout ou /pedido-confirmado.
